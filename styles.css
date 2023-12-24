@@ -1,0 +1,164 @@
+:root {
+    --background: #282c34;
+    --text-normal: #abb2bf;
+    --text-title: #e06c75;
+    --text-key: #d19a66;
+    --text-string: #98c379;
+    --text-footer: #a0aeb8; 
+    --text-brackets: #56b6c2;
+    --button-bg: #cb666e;
+    --button-hover-bg: #528bdc;
+    --input-output-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--background);
+    color: var(--text-normal);
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#projectTitle {
+    font-size: 2.5em;
+    color: var(--text-title);
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+    margin: 2%;
+    margin-top: auto; 
+
+}
+
+textarea, pre {
+    flex-basis: 50%; 
+    height: calc(50vh - 40px); 
+    padding: 10px;
+    margin-bottom: 0;
+    flex: 1; 
+    height: 85vh; 
+    margin: 5px;
+    padding: 10px;
+    background: none;
+    color: inherit;
+    border: none;
+    box-shadow: var(--input-output-shadow);
+    border-radius: 4px;
+    outline: none;
+    resize: none; 
+    overflow-x: auto; 
+}
+
+footer {
+    margin-top: auto; 
+    color: var(--text-footer);
+    text-align: center;
+    padding: 10px 0;
+
+}
+
+footer a {
+    color: var(--button-bg); 
+    text-decoration: none; 
+}
+
+footer a:hover {
+    text-decoration: underline; 
+}
+
+#notificationBanner {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background-color: #4caf50; 
+    color: white; 
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+    animation: fadeinout 3s linear forwards;
+}
+
+@keyframes fadeinout {
+    0%, 100% { opacity: 0; }
+    10%, 90% { opacity: 1; }
+}
+
+@media (max-width: 768px) { 
+    textarea, pre {
+        height: 25vh; 
+    }
+
+    .container {
+        flex-direction: column; 
+        height: 55rem;
+        margin: -1%;
+    }
+}
+
+@media (max-width: 528px) { 
+    .container {
+        flex-direction: column; 
+        height: 55rem;
+        margin: -2%;
+    }
+}
+
+.key {
+    color: var(--text-key); 
+}
+
+.value {
+    color: var(--text-string); 
+}
+
+.number {
+    color: #d19a66; 
+}
+
+.boolean {
+    color: #56b6c2; 
+}
+
+.bracket {
+    color: var(--text-brackets);
+}
+
+::-webkit-scrollbar {
+    background: var(--background);
+    width: 3px;
+}
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--background);
+}
